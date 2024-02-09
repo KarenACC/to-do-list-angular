@@ -1,0 +1,11 @@
+<app-add-task (addNewTask)="onNewTask($event)"></app-add-task>
+<!-- addNewTask es el evento que se emite usando el decorador output en el componente hijo (add-task-component)
+    y onNewTask es el método que controla ese evento desde el componente padre (main-page), a su vez, onNewTask hace 
+    referencia al método addTask, implementado en el servicio -->
+
+<app-list [taskList]="tasks"
+          (completeTaskList)="onCompleteTask($event)"></app-list>
+
+
+<app-completed [completedTasks]="done"
+               (uncompleteTask)="onUncompleteTask($event)"></app-completed>

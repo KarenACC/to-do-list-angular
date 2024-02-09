@@ -1,0 +1,18 @@
+<head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+
+<ul>
+    <li *ngFor="let task of taskList"> 
+
+        <button (click)="markTask(task)">
+            <span class="material-symbols-outlined">
+                radio_button_unchecked
+            </span>
+
+        </button>
+        {{task.title | titlecase}}
+    </li> 
+
+</ul>
